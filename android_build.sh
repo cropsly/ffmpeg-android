@@ -1,11 +1,13 @@
 #!/bin/bash
 
+## Configure your settings here
 ANDROID_NDK_ROOT_PATH=~/Android/ndk
 ANDROID_API_VERSION=android-9
 export PATH=${ANDROID_NDK_ROOT_PATH}:${ANDROID_NDK_ROOT_PATH}/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/:$PATH
 NDK_SYSROOT=$NDK_BASE/platforms/$ANDROID_API_VERSION/arch-arm
-NUMBER_OF_CORES=$(nproc)
+NUMBER_OF_CORES=$(nproc) # or number of cores you want to use to compile ffmpeg
 
+## Donot touch anything below this line
 #x264
 pushd x264
 make distclean
