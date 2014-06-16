@@ -14,5 +14,5 @@ Instructions
   1. git submodule init
   2. git submodule update
   3. ./android_build.sh
-* Find the executable binary in ffmpeg/build directory.
+* Find the executable binary in build directory.
 

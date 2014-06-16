@@ -26,13 +26,21 @@ make distclean
 # compiling the software) in the file named Makefile.
 
 # Here we are configuring x264, you can use "cd x264 && ./configure --help" to check various configuration options for x264 library
+#./configure \
+#--cross-prefix=arm-linux-androideabi- \  # Prefix for compilation tools
+#--sysroot="$NDK_SYSROOT" \ # ndk sysroot dir
+#--host=arm-linux \ # host system for which we are compiling
+#--enable-pic \ # build position-independent code
+#--enable-static \ # build static library
+#--disable-cli # disable cli tools
+
 ./configure \
---cross-prefix=arm-linux-androideabi- \  # Prefix for compilation tools
---sysroot="$NDK_SYSROOT" \ # ndk sysroot dir
---host=arm-linux \ # host system for which we are compiling
---enable-pic \ # build position-independent code
---enable-static \ # build static library
---disable-cli # disable cli tools
+--cross-prefix=arm-linux-androideabi- \
+--sysroot="$NDK_SYSROOT" \
+--host=arm-linux \
+--enable-pic \
+--enable-static \
+--disable-cli
 
 make -j$NUMBER_OF_CORES
 popd
@@ -49,7 +57,7 @@ pushd ffmpeg
 --disable-decoder=h264_vdpau \
 --enable-libx264 \
 --enable-gpl \
---prefix=build/armeabi-v7a-neon \
+--prefix=../build/armeabi-v7a-neon \
 --extra-cflags='-I../x264 -DANDROID -I${ANDROID_NDK_ROOT_PATH}/sources/cxx-stl/system/include -march=armv7-a -mfloat-abi=softfp -mfpu=neon' \
 --extra-ldflags='-L../x264 -Wl,--fix-cortex-a8 -L../android-libs -Wl,-rpath-link,../android-libs' \
 --extra-cxxflags='-Wno-multichar -fno-exceptions -fno-rtti'
@@ -68,7 +76,7 @@ pushd ffmpeg
 --disable-decoder=h264_vdpau \
 --enable-libx264 \
 --enable-gpl \
---prefix=build/armeabi-v7a \
+--prefix=../build/armeabi-v7a \
 --extra-cflags='-I../x264 -DANDROID -I${ANDROID_NDK_ROOT_PATH}/sources/cxx-stl/system/include -march=armv7-a -mfloat-abi=softfp' \
 --extra-ldflags='-L../x264 -Wl,--fix-cortex-a8 -L../android-libs -Wl,-rpath-link,../android-libs' \
 --extra-cxxflags='-Wno-multichar -fno-exceptions -fno-rtti'
