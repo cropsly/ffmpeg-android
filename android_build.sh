@@ -14,8 +14,16 @@ NUMBER_OF_CORES=$(nproc) # or number of cores you want to use to compile ffmpeg
 pushd x264
 make distclean
 
-# This command makes the shell run the script named configure which exists in the current directory. The configure script basically consists of many lines which are used to check some details about the machine on which the software is going to be installed. This script checks for lots of dependencies on your system. For the particular software to work properly, it may be requiring a lot of things to be existing on your machine already.  When you run the configure script you would see a lot of output on the screen, each being some sort of question and a respective yes/no as the reply. If any of the major requirements are missing on your system, the configure script would exit and you cannot proceed with the installation, until you get those required things. 
-# The main job of the configure script is to create a Makefile. This is a very important file for the installation process. Depending on the results of the tests (checks) that the configure script performed it would write down the various steps that need to be taken (while compiling the software) in the file named Makefile.
+# This command makes the shell run the script named configure which exists in the current directory. The configure script basically 
+# consists of many lines which are used to check some details about the machine on which the software is going to be installed. 
+# This script checks for lots of dependencies on your system. For the particular software to work properly, it may be requiring a 
+# lot of things to be existing on your machine already.  When you run the configure script you would see a lot of output on the screen, 
+# each being some sort of question and a respective yes/no as the reply. If any of the major requirements are missing on your system, 
+# the configure script would exit and you cannot proceed with the installation, until you get those required things. 
+
+# The main job of the configure script is to create a Makefile. This is a very important file for the installation process. Depending on 
+# the results of the tests (checks) that the configure script performed it would write down the various steps that need to be taken (while 
+# compiling the software) in the file named Makefile.
 ./configure \
 --cross-prefix=arm-linux-androideabi- \ 
 --sysroot="$NDK_SYSROOT" \
