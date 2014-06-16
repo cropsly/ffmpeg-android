@@ -73,6 +73,22 @@ popd
 
 #ffmpeg armv7-a neon
 pushd ffmpeg
+# here we are configuring ffmpeg for armv7-a neon devices
+#./configure \
+#--target-os=linux \ # we are compiling it on linux
+#--cross-prefix=arm-linux-androideabi- \
+#--arch=arm \ # architecture we are compiling for
+#--cpu=armv7-a \ # cpu we are compiling for
+#--sysroot="$NDK_SYSROOT" \
+#--disable-avdevice \ # disable libavdevice build
+#--disable-decoder=h264_vdpau \ # disabling decoder h264_vdpau
+#--enable-libx264 \  # enabling x264 lib
+#--enable-gpl \
+#--prefix=../build/armeabi-v7a-neon \ # setting build prefix path
+#--extra-cflags='-I../x264 -DANDROID -I${ANDROID_NDK_ROOT_PATH}/sources/cxx-stl/system/include -march=armv7-a -mfloat-abi=softfp -mfpu=neon' \ # setting C Flags for compilation and included x264 library
+#--extra-ldflags='-L../x264 -Wl,--fix-cortex-a8 -L../android-libs -Wl,-rpath-link,../android-libs' \ # setting ldflags for compilation  and included x264 library
+#--extra-cxxflags='-Wno-multichar -fno-exceptions -fno-rtti' # setting cxx compilation flags
+
 ./configure \
 --target-os=linux \
 --cross-prefix=arm-linux-androideabi- \
@@ -87,11 +103,14 @@ pushd ffmpeg
 --extra-cflags='-I../x264 -DANDROID -I${ANDROID_NDK_ROOT_PATH}/sources/cxx-stl/system/include -march=armv7-a -mfloat-abi=softfp -mfpu=neon' \
 --extra-ldflags='-L../x264 -Wl,--fix-cortex-a8 -L../android-libs -Wl,-rpath-link,../android-libs' \
 --extra-cxxflags='-Wno-multichar -fno-exceptions -fno-rtti'
+
+# building and copying binaries to prefix directory path
 make -j$NUMBER_OF_CORES && make install && make distclean|| exit 0
 popd
 
 #ffmpeg armv7-a
 pushd ffmpeg
+# here we are configuring ffmpeg for armv7-a cpu devices
 ./configure \
 --target-os=linux \
 --cross-prefix=arm-linux-androideabi- \
@@ -107,6 +126,7 @@ pushd ffmpeg
 --extra-ldflags='-L../x264 -Wl,--fix-cortex-a8 -L../android-libs -Wl,-rpath-link,../android-libs' \
 --extra-cxxflags='-Wno-multichar -fno-exceptions -fno-rtti'
 
+# building and copying binaries to prefix directory path
 make -j$NUMBER_OF_CORES && make install && make distclean|| exit 0
 popd
 
