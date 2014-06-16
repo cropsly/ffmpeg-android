@@ -3,7 +3,9 @@
 ## Configure your settings here
 ANDROID_NDK_ROOT_PATH=~/Android/ndk
 ANDROID_API_VERSION=android-9
+# including android toolchain binaries by exporting toolchains bin path to PATH variable
 export PATH=${ANDROID_NDK_ROOT_PATH}:${ANDROID_NDK_ROOT_PATH}/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/:$PATH
+# sysroot is a GCC term for a directory containing the system headers and libraries of your target
 NDK_SYSROOT=$NDK_BASE/platforms/$ANDROID_API_VERSION/arch-arm
 NUMBER_OF_CORES=$(nproc) # or number of cores you want to use to compile ffmpeg
 
@@ -12,7 +14,7 @@ NUMBER_OF_CORES=$(nproc) # or number of cores you want to use to compile ffmpeg
 pushd x264
 make distclean
 ./configure \
---cross-prefix=arm-linux-androideabi- \
+--cross-prefix=arm-linux-androideabi- \ 
 --sysroot="$NDK_SYSROOT" \
 --host=arm-linux \
 --enable-pic \
