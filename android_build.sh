@@ -24,13 +24,15 @@ make distclean
 # The main job of the configure script is to create a Makefile. This is a very important file for the installation process. Depending on 
 # the results of the tests (checks) that the configure script performed it would write down the various steps that need to be taken (while 
 # compiling the software) in the file named Makefile.
+
+# Here we are configuring x264, you can use "cd x264 && ./configure --help" to check various configuration options for x264 library
 ./configure \
---cross-prefix=arm-linux-androideabi- \ 
---sysroot="$NDK_SYSROOT" \
---host=arm-linux \
---enable-pic \
---enable-static \
---disable-cli
+--cross-prefix=arm-linux-androideabi- \  # Prefix for compilation tools
+--sysroot="$NDK_SYSROOT" \ # ndk sysroot dir
+--host=arm-linux \ # host system for which we are compiling
+--enable-pic \ # build position-independent code
+--enable-static \ # build static library
+--disable-cli # disable cli tools
 
 make -j$NUMBER_OF_CORES
 popd
