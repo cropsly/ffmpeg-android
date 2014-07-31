@@ -82,6 +82,8 @@ public class MyActivity extends Activity {
                 } catch (InterruptedException e) {
                     Log.e(TAG, "FFmpeg command interrupted", e);
                 }
+            } else {
+                setFFmpegTextViewText("Device Not Supported");
             }
         }
     }
