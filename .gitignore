@@ -1,3 +1,6 @@
 x264
 ffmpeg
+libpng
+freetype2
+*.o
 build
