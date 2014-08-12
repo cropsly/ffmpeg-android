@@ -1,0 +1,31 @@
+This project is a bundle of various other projects and a few patches.
+
+Each project has is own license, and any patches to them are under the original
+license.
+
+Any source code not covered by a project license is GPLv3.
+
+FFMPEG:
+    ffmpeg/COPYING.LGPLv2.1
+    ffmpeg/COPYING.LGPLv3
+    ffmpeg/COPYING.GPLv2
+    ffmpeg/COPYING.GPLv3
+
+freetype2:
+    freetype2/docs/GPLv2.TXT
+    freetype2/docs/FTL.TXT
+
+x264:
+    x264/COPYING
+
+expat:
+    expat/COPYING
+
+fontconfig:
+    fontconfig/COPYING
+
+fribidi:
+    fribidi/COPYING
+
+libass:
+    libass/COPYING
