@@ -3,5 +3,6 @@ ffmpeg
 libpng
 freetype2
 expat
+fribidi
 *.o
 build

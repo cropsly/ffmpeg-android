@@ -13,3 +13,6 @@
 [submodule "expat"]
 	path = expat
 	url = git@github.com:hiteshsondhi88/expat.git
+[submodule "fribidi"]
+	path = fribidi
+	url = git://anongit.freedesktop.org/fribidi/fribidi
