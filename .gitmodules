@@ -19,3 +19,6 @@
 [submodule "fontconfig"]
 	path = fontconfig
 	url = git://anongit.freedesktop.org/fontconfig
+[submodule "libass"]
+	path = libass
+	url = https://github.com/libass/libass.git

@@ -4,5 +4,7 @@ libpng
 freetype2
 expat
 fribidi
+fontconfig
+libass
 *.o
 build
