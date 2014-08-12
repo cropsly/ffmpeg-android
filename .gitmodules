@@ -10,3 +10,6 @@
 [submodule "freetype2"]
 	path = freetype2
 	url = git://git.sv.nongnu.org/freetype/freetype2.git
+[submodule "expat"]
+	path = expat
+	url = git@github.com:hiteshsondhi88/expat.git

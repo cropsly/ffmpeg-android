@@ -2,5 +2,6 @@ x264
 ffmpeg
 libpng
 freetype2
+expat
 *.o
 build
