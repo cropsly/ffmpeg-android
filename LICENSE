@@ -29,3 +29,6 @@ fribidi:
 
 libass:
     libass/COPYING
+
+libpng:
+    libpng/LICENSE
