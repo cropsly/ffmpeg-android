@@ -14,5 +14,5 @@ do
   ./fribidi_build.sh $i $BASEDIR || exit 1
   ./fontconfig_build.sh $i $BASEDIR || exit 1
   ./libass_build.sh $i $BASEDIR || exit 1
-  ./ffmpeg_build.sh $i $BASEDIR || exit 1
+#  ./ffmpeg_build.sh $i $BASEDIR || exit 1
 done

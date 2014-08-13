@@ -6,6 +6,8 @@ pushd fontconfig
 
 make clean
 
+./autogen.sh
+
 ./configure \
   CC="$CC" \
   LD="$LD" \

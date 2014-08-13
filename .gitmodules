@@ -19,3 +19,6 @@
 [submodule "fribidi"]
 	path = fribidi
 	url = git@github.com:hiteshsondhi88/fribidi.git
+[submodule "fontconfig"]
+	path = fontconfig
+	url = git@github.com:hiteshsondhi88/fontconfig.git
