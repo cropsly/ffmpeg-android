@@ -1,7 +1,7 @@
-ffmpeg-android
+FFmpeg-Android
 ==============
 
-ffmpeg library compiled with x264 for android
+FFmpeg for Android compiled with x264, libass, fontconfig, freetype and fribidi
 
 Supported Architecture
 ----
@@ -9,9 +9,8 @@ Supported Architecture
 
 Instructions
 ----
-* Edit android_build.sh and set ANDROID_NDK_ROOT_PATH according to your NDK root path
+* Edit settings.sh and set ANDROID_NDK_ROOT_PATH according to your NDK root path
 * Run following commands to compile ffmpeg
-  1. git submodule init
-  2. git submodule update
-  3. ./android_build.sh
+  1. git submodule update --init
+  2. ./android_build.sh
 * Find the executable binary in build directory.
