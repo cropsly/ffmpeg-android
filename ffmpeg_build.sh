@@ -31,7 +31,7 @@ make clean
 --disable-doc \
 --disable-shared \
 --enable-static \
---pkg-config="TOOLCHAIN_PATH=${TOOLCHAIN_PREFIX} ${2}/ffmpeg-pkg-config" \
+--pkg-config="${2}/ffmpeg-pkg-config" \
 --prefix="${2}/build/${1}" \
 --extra-cflags="-I${TOOLCHAIN_PREFIX}/include $CFLAGS" \
 --extra-ldflags="-L${TOOLCHAIN_PREFIX}/lib $LDFLAGS" \

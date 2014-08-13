@@ -6,7 +6,7 @@ pushd fontconfig
 
 make clean
 
-./autogen.sh
+autoreconf -ivf .
 
 ./configure \
   CC="$CC" \
