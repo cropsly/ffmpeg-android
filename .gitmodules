@@ -16,9 +16,6 @@
 [submodule "libass"]
 	path = libass
 	url = https://github.com/libass/libass.git
-[submodule "fribidi"]
-	path = fribidi
-	url = git@github.com:hiteshsondhi88/fribidi.git
 [submodule "fontconfig"]
 	path = fontconfig
 	url = git://anongit.freedesktop.org/fontconfig
