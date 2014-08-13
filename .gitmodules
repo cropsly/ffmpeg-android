@@ -6,16 +6,13 @@
 	url = git://git.videolan.org/x264.git
 [submodule "libpng"]
 	path = libpng
-	url = git://git.code.sf.net/p/libpng/code
+	url = git@github.com:hiteshsondhi88/libpng.git
 [submodule "freetype2"]
 	path = freetype2
 	url = git://git.sv.nongnu.org/freetype/freetype2.git
 [submodule "expat"]
 	path = expat
 	url = git@github.com:hiteshsondhi88/expat.git
-[submodule "fribidi"]
-	path = fribidi
-	url = git://anongit.freedesktop.org/fribidi/fribidi
 [submodule "fontconfig"]
 	path = fontconfig
 	url = git://anongit.freedesktop.org/fontconfig
