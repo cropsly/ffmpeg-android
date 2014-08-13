@@ -20,7 +20,7 @@ make clean
 --enable-libfribidi \
 --enable-fontconfig \
 --enable-pthreads \
---enable-debug \
+--disable-debug \
 --disable-ffserver \
 --enable-version3 \
 --enable-hardcoded-tables \
