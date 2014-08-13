@@ -19,3 +19,6 @@
 [submodule "fontconfig"]
 	path = fontconfig
 	url = git://anongit.freedesktop.org/fontconfig
+[submodule "fribidi"]
+	path = fribidi
+	url = git@github.com:hiteshsondhi88/fribidi.git

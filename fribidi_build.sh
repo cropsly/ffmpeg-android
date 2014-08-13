@@ -6,7 +6,7 @@ pushd fribidi
 
 make clean
 
-autoreconf -ivf .
+autoreconf -ivf
 
 ./configure \
   CC="$CC" \

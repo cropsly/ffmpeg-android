@@ -6,7 +6,7 @@ pushd fontconfig
 
 make clean
 
-autoreconf -ivf .
+autoreconf -ivf
 
 ./configure \
   CC="$CC" \
