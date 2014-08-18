@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. abi_settings.sh $1 $2
+. abi_settings.sh $1 $2 $3
 
 pushd ffmpeg
 
