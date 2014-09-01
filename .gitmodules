@@ -7,18 +7,9 @@
 [submodule "freetype2"]
 	path = freetype2
 	url = git://git.sv.nongnu.org/freetype/freetype2.git
-[submodule "expat"]
-	path = expat
-	url = git@github.com:hiteshsondhi88/expat.git
 [submodule "libass"]
 	path = libass
 	url = https://github.com/libass/libass.git
 [submodule "fontconfig"]
 	path = fontconfig
 	url = git://anongit.freedesktop.org/fontconfig
-[submodule "fribidi"]
-	path = fribidi
-	url = git@github.com:hiteshsondhi88/fribidi.git
-[submodule "libpng"]
-	path = libpng
-	url = git@github.com:hiteshsondhi88/libpng.git
