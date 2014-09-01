@@ -13,3 +13,12 @@
 [submodule "fontconfig"]
 	path = fontconfig
 	url = git://anongit.freedesktop.org/fontconfig
+[submodule "expat"]
+	path = expat
+	url = https://github.com/hiteshsondhi88/expat.git
+[submodule "libpng"]
+	path = libpng
+	url = https://github.com/hiteshsondhi88/libpng.git
+[submodule "fribidi"]
+	path = fribidi
+	url = https://github.com/hiteshsondhi88/fribidi.git
