@@ -1,6 +1,7 @@
 *.o
 build
 toolchain-*
+libpng-*
 
 # Created by http://www.gitignore.io
 
@@ -33,4 +34,3 @@ Temporary Items
 
 # KDE directory preferences
 .directory
-
