@@ -2,6 +2,8 @@
 build
 toolchain-*
 libpng-*
+expat-*
+fribidi-*
 
 # Created by http://www.gitignore.io
 
