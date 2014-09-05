@@ -18,7 +18,7 @@ Instructions
   3. ./android_build.sh
 * Find the executable binary in build directory.
 * If you want to use FONTCONFIG then you need to specify your custom fontconfig config file (e.g - "FONTCONFIG_FILE=/sdcard/fonts.conf ./ffmpeg --version", where /sdcard/fonts.conf is location of your FONTCONFIG configuration file).
-* You can also download [prebuilt-binaries](releases/download/v0.1.0/prebuilt-binaries.tar.gz) here.
+* You can also download [prebuilt-binaries](https://github.com/hiteshsondhi88/ffmpeg-android/releases/download/v0.1.0/prebuilt-binaries.tar.gz) here.
 
 License
 ----
