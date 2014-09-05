@@ -19,7 +19,7 @@ Instructions
 * To update submodules and libraries you can use ./init_update_libs.sh command
 * Find the executable binary in build directory.
 * If you want to use FONTCONFIG then you need to specify your custom fontconfig config file (e.g - "FONTCONFIG_FILE=/sdcard/fonts.conf ./ffmpeg --version", where /sdcard/fonts.conf is location of your FONTCONFIG configuration file).
-* You can also download [prebuilt-binaries](https://github.com/hiteshsondhi88/ffmpeg-android/releases/download/v0.1.0/prebuilt-binaries.tar.gz) here.
+* You can also download [prebuilt-binaries](https://github.com/hiteshsondhi88/ffmpeg-android/releases/download/v0.2.0/prebuilt-binaries.zip) here.
 
 License
 ----
