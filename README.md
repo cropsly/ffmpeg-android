@@ -7,6 +7,7 @@ FFmpeg-Android
 Supported Architecture
 ----
 * armv7
+* x86
 
 Instructions
 ----
