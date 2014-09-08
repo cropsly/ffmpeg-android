@@ -13,6 +13,7 @@ make clean
   --with-pic \
   --host="$NDK_TOOLCHAIN_ABI" \
   --disable-enca \
+  --disable-asm \
   --enable-fontconfig \
   --disable-harfbuzz \
   --enable-static \

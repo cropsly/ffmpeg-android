@@ -8,15 +8,23 @@ case $1 in
   armeabi-v7a)
     NDK_ABI='arm'
     NDK_TOOLCHAIN_ABI='arm-linux-androideabi'
-    ARCH_CPU='armv7-a'
-    CFLAGS="$CFLAGS_LIBS -march=$ARCH_CPU"
+    NDK_CROSS_PREFIX="${NDK_TOOLCHAIN_ABI}"
+    CFLAGS="$CFLAGS -march=armv7-a"
+    CFLAGS_LIBS="$CFLAGS_LIBS -mcpu=cortex-a8 -marm -mfloat-abi=softfp"
   ;;
   armeabi-v7a-neon)
     NDK_ABI='arm'
     NDK_TOOLCHAIN_ABI='arm-linux-androideabi'
-    ARCH_CPU='armv7-a'
-    CFLAGS="$CFLAGS -march=$ARCH_CPU -mfpu=neon"
-    CFLAGS_LIBS="$CFLAGS_LIBS -mfpu=neon"
+    NDK_CROSS_PREFIX="${NDK_TOOLCHAIN_ABI}"
+    CFLAGS="$CFLAGS -march=armv7-a -mfpu=neon"
+    CFLAGS_LIBS="$CFLAGS_LIBS -mcpu=cortex-a8 -marm -mfloat-abi=softfp -mfpu=neon"
+  ;;
+  x86)
+    NDK_ABI='x86'
+    NDK_TOOLCHAIN_ABI='x86'
+    NDK_CROSS_PREFIX="i686-linux-android"
+    CFLAGS="$CFLAGS -march=i686"
+    CFLAGS_LIBS="$CFLAGS_LIBS -march=i686"
   ;;
 esac
 
@@ -24,7 +32,7 @@ TOOLCHAIN_PREFIX=${BASEDIR}/toolchain-android
 if [ ! -d "$TOOLCHAIN_PREFIX" ]; then
   ${ANDROID_NDK_ROOT_PATH}/build/tools/make-standalone-toolchain.sh --toolchain=${NDK_TOOLCHAIN_ABI}-${NDK_TOOLCHAIN_ABI_VERSION} --platform=android-${ANDROID_API_VERSION} --install-dir=${TOOLCHAIN_PREFIX}
 fi
-CROSS_PREFIX=${TOOLCHAIN_PREFIX}/bin/${NDK_TOOLCHAIN_ABI}-
+CROSS_PREFIX=${TOOLCHAIN_PREFIX}/bin/${NDK_CROSS_PREFIX}-
 NDK_SYSROOT=${TOOLCHAIN_PREFIX}/sysroot
 
 export PKG_CONFIG_LIBDIR="${TOOLCHAIN_PREFIX}/lib/pkgconfig"
