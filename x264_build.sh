@@ -10,7 +10,12 @@ case $1 in
   armeabi-v7a | armeabi-v7a-neon)
     HOST=arm-linux
   ;;
+  x86)
+    HOST=i686-linux
+  ;;
 esac
+
+echo $CFLAGS
 
 ./configure \
   --cross-prefix="$CROSS_PREFIX" \
