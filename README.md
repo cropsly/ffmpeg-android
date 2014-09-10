@@ -1,12 +1,13 @@
-FFmpeg-Android [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FFmpeg--Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/925)
+[FFmpeg-Android](http://hiteshsondhi88.github.io/ffmpeg-android/) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FFmpeg--Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/925)
 ==============
 
 * FFmpeg for Android compiled with x264, libass, fontconfig, freetype and fribidi
-* Added Android L support
+* Supports Android L
 
 Supported Architecture
 ----
 * armv7
+* armv7-neon
 * x86
 
 Instructions
