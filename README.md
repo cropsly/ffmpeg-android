@@ -3,6 +3,7 @@
 
 * FFmpeg for Android compiled with x264, libass, fontconfig, freetype and fribidi
 * Supports Android L
+* [FFmpeg Android Library](https://github.com/hiteshsondhi88/ffmpeg-android-java)
 
 Supported Architecture
 ----
