@@ -9,13 +9,12 @@ case $1 in
     NDK_ABI='arm'
     NDK_TOOLCHAIN_ABI='arm-linux-androideabi'
     NDK_CROSS_PREFIX="${NDK_TOOLCHAIN_ABI}"
-    CFLAGS="$CFLAGS -march=armv7-a"
   ;;
   armeabi-v7a-neon)
     NDK_ABI='arm'
     NDK_TOOLCHAIN_ABI='arm-linux-androideabi'
     NDK_CROSS_PREFIX="${NDK_TOOLCHAIN_ABI}"
-    CFLAGS="$CFLAGS -march=armv7-a -mfpu=neon"
+    CFLAGS="${CFLAGS} -mfpu=neon"
   ;;
   x86)
     NDK_ABI='x86'
