@@ -9,22 +9,18 @@ case $1 in
     NDK_ABI='arm'
     NDK_TOOLCHAIN_ABI='arm-linux-androideabi'
     NDK_CROSS_PREFIX="${NDK_TOOLCHAIN_ABI}"
-    CFLAGS="$CFLAGS -march=armv7-a"
-    CFLAGS_LIBS="$CFLAGS_LIBS -mcpu=cortex-a8 -marm -mfloat-abi=softfp"
   ;;
   armeabi-v7a-neon)
     NDK_ABI='arm'
     NDK_TOOLCHAIN_ABI='arm-linux-androideabi'
     NDK_CROSS_PREFIX="${NDK_TOOLCHAIN_ABI}"
-    CFLAGS="$CFLAGS -march=armv7-a -mfpu=neon"
-    CFLAGS_LIBS="$CFLAGS_LIBS -mcpu=cortex-a8 -marm -mfloat-abi=softfp -mfpu=neon"
+    CFLAGS="${CFLAGS} -mfpu=neon"
   ;;
   x86)
     NDK_ABI='x86'
     NDK_TOOLCHAIN_ABI='x86'
     NDK_CROSS_PREFIX="i686-linux-android"
     CFLAGS="$CFLAGS -march=i686"
-    CFLAGS_LIBS="$CFLAGS_LIBS -march=i686"
   ;;
 esac
 
