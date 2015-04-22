@@ -27,3 +27,7 @@ Instructions
 License
 ----
   check files LICENSE.GPLv3 and LICENSE
+
+HIRE US
+--------
+Get in touch with us - http://www.writingminds.com
