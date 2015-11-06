@@ -2,21 +2,23 @@
 
 . abi_settings.sh $1 $2 $3
 
-pushd libpng-1.6.16
+pushd lame-3.99.5
 
 make clean
 
-ARM_NEON="no"
 case $1 in
-  armeabi-v7a-neon)
-    ARM_NEON="yes"
-    ;;
+  armeabi-v7a | armeabi-v7a-neon)
+    HOST=arm-linux
+  ;;
+  x86)
+    HOST=i686-linux
+  ;;
 esac
 
 ./configure \
   --with-pic \
   --with-sysroot="$NDK_SYSROOT" \
-  --host="$NDK_TOOLCHAIN_ABI" \
+  --host="$HOST" \
   --enable-static \
   --disable-shared \
   --prefix="${TOOLCHAIN_PREFIX}" \
