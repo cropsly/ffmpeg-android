@@ -8,6 +8,7 @@ echo "Updating libpng, expat and fribidi"
 rm -rf libpng-*
 rm -rf expat-*
 rm -rf fribidi-*
+rm -rf lame-*
 
 wget -O- ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.21.tar.xz | tar xJ
 wget -O- http://downloads.sourceforge.net/project/expat/expat/2.1.0/expat-2.1.0.tar.gz | tar xz
