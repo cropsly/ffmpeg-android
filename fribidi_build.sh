@@ -2,7 +2,7 @@
 
 . abi_settings.sh $1 $2 $3
 
-pushd fribidi-0.19.6
+pushd fribidi-0.19.7
 
 make clean
 
