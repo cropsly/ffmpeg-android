@@ -5,6 +5,9 @@ libpng-*
 expat-*
 fribidi-*
 lame-*
+ffmpeg-*
+freetype-*
+libass-*
 
 # Created by http://www.gitignore.io
 

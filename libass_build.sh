@@ -2,7 +2,7 @@
 
 . abi_settings.sh $1 $2 $3
 
-pushd libass
+pushd libass-0.13.6
 
 make clean
 

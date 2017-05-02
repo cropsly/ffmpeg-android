@@ -9,7 +9,7 @@ fi
 ANDROID_API_VERSION=9
 NDK_TOOLCHAIN_ABI_VERSION=4.8
 
-NUMBER_OF_CORES=$(nproc)
+NUMBER_OF_CORES=$(sysctl -n hw.ncpu)
 HOST_UNAME=$(uname -m)
 TARGET_OS=linux
 
