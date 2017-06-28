@@ -2,7 +2,9 @@
 
 . abi_settings.sh $1 $2 $3
 
-pushd ffmpeg
+oot="${2}/build/${1}/oot/ffmpeg"
+mkdir -p "$oot"
+pushd "$oot"
 
 case $1 in
   armeabi-v7a | armeabi-v7a-neon)
