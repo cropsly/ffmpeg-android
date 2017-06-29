@@ -15,9 +15,9 @@ case $1 in
   ;;
 esac
 
-make clean
+make distclean
 
-./configure \
+"${2}/ffmpeg/configure" \
 --target-os="$TARGET_OS" \
 --cross-prefix="$CROSS_PREFIX" \
 --arch="$NDK_ABI" \
@@ -39,7 +39,7 @@ make clean
 --disable-ffplay \
 --disable-ffprobe \
 --enable-gpl \
---enable-yasm \
+--disable-asm \
 --disable-doc \
 --disable-shared \
 --enable-static \
