@@ -5,7 +5,7 @@ libpng-*
 expat-*
 fribidi-*
 lame-*
-ffmpeg-*
+ffmpeg-3.*
 freetype-*
 libass-*
 

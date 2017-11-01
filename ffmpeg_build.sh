@@ -2,7 +2,7 @@
 
 . abi_settings.sh $1 $2 $3
 
-pushd ffmpeg-3.3
+pushd ffmpeg-3.3.5
 
 case $1 in
   armeabi-v7a | armeabi-v7a-neon)
@@ -22,13 +22,7 @@ make clean
 --cpu="$CPU" \
 --enable-runtime-cpudetect \
 --sysroot="$NDK_SYSROOT" \
---enable-pic \
 --enable-libx264 \
---enable-libass \
---enable-libfreetype \
---enable-libfribidi \
---enable-libmp3lame \
---enable-fontconfig \
 --enable-pthreads \
 --disable-debug \
 --disable-ffserver \
@@ -36,17 +30,34 @@ make clean
 --enable-hardcoded-tables \
 --disable-ffplay \
 --disable-ffprobe \
---enable-gpl \
 --enable-yasm \
 --disable-doc \
 --disable-shared \
 --enable-static \
---pkg-config="${2}/ffmpeg-pkg-config" \
+--enable-nonfree \
+--disable-network \
+--enable-gpl \
+--enable-ffmpeg \
+--enable-small \
+--disable-filters \
+--enable-filter=copy \
+--enable-filter=trim \
+--enable-filter=crop \
+--enable-filter=scale \
+--enable-filter=format \
+--pkg-config="${2}/ffmpeg-3.3-pkg-config" \
 --prefix="${2}/build/${1}" \
 --extra-cflags="-I${TOOLCHAIN_PREFIX}/include $CFLAGS" \
 --extra-ldflags="-L${TOOLCHAIN_PREFIX}/lib $LDFLAGS" \
---extra-libs="-lpng -lexpat -lm" \
---extra-cxxflags="$CXX_FLAGS" || exit 1
+--extra-cxxflags="$CXX_FLAGS" \
+--extra-libs="-lx264 -lm" || exit 1
+
+# --enable-libass \
+# --enable-libfreetype \
+# --enable-libfribidi \
+# --enable-libmp3lame \
+# --enable-fontconfig \
+# --extra-libs="-lpng -lexpat -lm" \
 
 make -j${NUMBER_OF_CORES} && make install || exit 1
 
