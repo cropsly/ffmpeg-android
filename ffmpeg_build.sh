@@ -30,35 +30,25 @@ make clean
 --enable-hardcoded-tables \
 --disable-ffplay \
 --disable-ffprobe \
+--enable-gpl \
 --enable-yasm \
 --disable-doc \
 --disable-shared \
 --enable-static \
---enable-nonfree \
---disable-network \
---enable-gpl \
---enable-ffmpeg \
 --enable-small \
---disable-filters \
---enable-filter=copy \
---enable-filter=trim \
---enable-filter=crop \
---enable-filter=scale \
---enable-filter=format \
---pkg-config="${2}/ffmpeg-3.3-pkg-config" \
+--disable-network \
+--pkg-config="${2}/ffmpeg-pkg-config-for-3.3" \
 --prefix="${2}/build/${1}" \
 --extra-cflags="-I${TOOLCHAIN_PREFIX}/include $CFLAGS" \
 --extra-ldflags="-L${TOOLCHAIN_PREFIX}/lib $LDFLAGS" \
---extra-cxxflags="$CXX_FLAGS" \
---extra-libs="-lx264 -lm" || exit 1
-
-# --enable-libass \
-# --enable-libfreetype \
-# --enable-libfribidi \
-# --enable-libmp3lame \
-# --enable-fontconfig \
-# --extra-libs="-lpng -lexpat -lm" \
+--extra-libs="-lx264" \
+--extra-cxxflags="$CXX_FLAGS" || exit 1
 
 make -j${NUMBER_OF_CORES} && make install || exit 1
 
 popd
+
+
+# TODO: ENABLE ONLY FILTERS THAT WE USE. NOW GIVES ERROR WHEN USING CONVERT
+# --disable-filters \
+# --enable-filter=crop,scale,acopy,format,trim,rotate \
