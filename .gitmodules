@@ -1,15 +1,15 @@
-[submodule "ffmpeg"]
-	path = ffmpeg
-	url = git://source.ffmpeg.org/ffmpeg.git
+# [submodule "ffmpeg"]
+# 	path = ffmpeg
+# 	url = git://source.ffmpeg.org/ffmpeg.git
 [submodule "x264"]
 	path = x264
 	url = git://git.videolan.org/x264.git
-[submodule "freetype2"]
-	path = freetype2
-	url = git://git.sv.nongnu.org/freetype/freetype2.git
-[submodule "libass"]
-	path = libass
-	url = https://github.com/libass/libass.git
+# [submodule "freetype2"]
+# 	path = freetype2
+# 	url = git://git.sv.nongnu.org/freetype/freetype2.git
+# [submodule "libass"]
+# 	path = libass
+# 	url = https://github.com/libass/libass.git
 [submodule "fontconfig"]
 	path = fontconfig
 	url = git://anongit.freedesktop.org/fontconfig

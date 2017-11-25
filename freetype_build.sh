@@ -2,7 +2,7 @@
 
 . abi_settings.sh $1 $2 $3
 
-pushd freetype2
+pushd freetype-2.7.1
 
 make clean
 
