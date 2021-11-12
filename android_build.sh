@@ -5,10 +5,10 @@
 BASEDIR=$(pwd)
 TOOLCHAIN_PREFIX=${BASEDIR}/toolchain-android
 # Applying required patches
-patch  -p0 -N --dry-run --silent -f fontconfig/src/fcxml.c < android_donot_use_lconv.patch 1>/dev/null
-if [ $? -eq 0 ]; then
-  patch -p0 -f fontconfig/src/fcxml.c < android_donot_use_lconv.patch
-fi
+# patch  -p0 -N --dry-run --silent -f fontconfig/src/fcxml.c < android_donot_use_lconv.patch 1>/dev/null
+# if [ $? -eq 0 ]; then
+#   patch -p0 -f fontconfig/src/fcxml.c < android_donot_use_lconv.patch
+# fi
 
 for i in "${SUPPORTED_ARCHITECTURES[@]}"
 do

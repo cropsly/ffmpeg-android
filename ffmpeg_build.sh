@@ -2,7 +2,9 @@
 
 . abi_settings.sh $1 $2 $3
 
-pushd ffmpeg
+oot="${2}/build/${1}/oot/ffmpeg"
+mkdir -p "$oot"
+pushd "$oot"
 
 case $1 in
   armeabi-v7a | armeabi-v7a-neon)
@@ -13,9 +15,9 @@ case $1 in
   ;;
 esac
 
-make clean
+make distclean
 
-./configure \
+"${2}/ffmpeg/configure" \
 --target-os="$TARGET_OS" \
 --cross-prefix="$CROSS_PREFIX" \
 --arch="$NDK_ABI" \
@@ -37,7 +39,7 @@ make clean
 --disable-ffplay \
 --disable-ffprobe \
 --enable-gpl \
---enable-yasm \
+--disable-asm \
 --disable-doc \
 --disable-shared \
 --enable-static \
